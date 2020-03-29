@@ -9,10 +9,10 @@
     <meta name="keyword" content="Sistema Compras-Ventas con Laravel y Vue Js">
     <title>Proyecto</title>
     <!-- Icons -->
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/simple-line-icons.min.css" rel="stylesheet">
+    <link href="{{asset('css/font-awesome.min.css')}}" rel="stylesheet">
+    <link href="{{asset('css/simple-line-icons.min.css')}}" rel="stylesheet">
     <!-- Main styles for this application -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="{{asset('css/style.css')}}" rel="stylesheet">
 </head>
 
 <body class="app header-fixed sidebar-fixed aside-menu-fixed aside-menu-hidden">
@@ -56,57 +56,7 @@
 
     <div class="app-body">
 
-       <div class="sidebar">
-            <nav class="sidebar-nav">
-                <ul class="nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#"><i class="icon-speedometer"></i> Dashbord</a>
-                    </li>
-                    <li class="nav-title">
-                        Menú
-                    </li>
-
-                   
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa fa-list"></i> Categorías</a>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa fa-tasks"></i> Productos</a>
-                    </li>
-                      
-            
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa fa-shopping-cart"></i> Compras</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa fa-users"></i> Proveedores</a>
-                    </li>
-                       
-                   
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa fa-suitcase"></i> Ventas</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa fa-users"></i> Clientes</a>
-                    </li>
-                        
-                    
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa fa-user"></i> Usuarios</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa fa-list"></i> Roles</a>
-                    </li>
-                        
-                    
-                </ul>
-            </nav>
-            <button class="sidebar-minimizer brand-minimizer" type="button"></button>
-        </div>
+       @include('plantilla.sidebar')
 
         <!-- Contenido Principal -->
        <main class="main">
@@ -274,14 +224,14 @@
     </footer>
 
     <!-- Bootstrap and necessary plugins -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/pace.min.js"></script>
+    <script src=" {{asset('js/jquery.min.js')}} "></script>
+    <script src="{{asset('js/popper.min.js')}}"></script>
+    <script src="{{asset('js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('js/pace.min.js')}}"></script>
     <!-- Plugins and scripts required by all views -->
-    <script src="js/Chart.min.js"></script>
+    <script src="{{asset('js/Chart.min.js')}}"></script>
     <!-- GenesisUI main scripts -->
-    <script src="js/template.js"></script>
+    <script src="{{asset('js/template.js')}}"></script>
 </body>
 
 </html>
