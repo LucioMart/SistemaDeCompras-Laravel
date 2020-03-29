@@ -21,8 +21,8 @@ class CategoriaController extends Controller
             $categorias = DB::table('categorias')->where('nombre', 'LIKE', '%'.$textoABuscar.'%')
                                                  ->orderBy('id', 'desc')
                                                  ->paginate(3);
-         //   return view('categoria.index', compact('textoABuscar','categorias'));
-         return $categorias;
+            return view('categoria.index', compact('textoABuscar','categorias'));
+         // return $categorias;
         }
     }
 
